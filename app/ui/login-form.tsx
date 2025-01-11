@@ -37,6 +37,7 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
+                defaultValue="user@nextmail.com"
                 placeholder="Enter your email address"
                 required
               />
@@ -56,6 +57,7 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
+                defaultValue="123456"
                 placeholder="Enter password"
                 required
                 minLength={6}
