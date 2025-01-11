@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '@/app/ui/button';
-import { useActionState } from 'react';
+import { useActionState, useState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 
 export default function LoginForm() {
@@ -16,6 +16,8 @@ export default function LoginForm() {
     authenticate,
     undefined,
   );
+  const [email, setEmail] = useState('user@nextmail.com');
+  const [password, setPassword] = useState('123456');
 
   return (
     <form action={formAction} className="space-y-3">
@@ -37,7 +39,8 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
-                defaultValue="user@nextmail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 required
               />
@@ -57,7 +60,8 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
-                defaultValue="123456"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
                 required
                 minLength={6}
@@ -85,3 +89,4 @@ export default function LoginForm() {
     </form>
   );
 }
+
