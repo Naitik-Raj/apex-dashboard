@@ -13,7 +13,7 @@ export default function LoginPage() {
                 </div>
                 <LoginForm />
                 <Link href={'/signup'} className="mt-5 flex items-center justify-center gap-2 text-sm text-gray-500">
-                    Don't have an account?{' signup'}
+                    Don&apos;t have an account?{' signup'}
                 </Link>
             </div>
         </main>

@@ -1,6 +1,6 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import Link from 'next/link';
-import SignupForm from '../ui/signup-form';
+// import SignupForm from '../ui/signup-form';
 
 export default function signupPage() {
     return (
@@ -11,7 +11,7 @@ export default function signupPage() {
                         <AcmeLogo />
                     </div>
                 </div>
-                <SignupForm />
+                {/* <SignupForm /> */}
                 <Link href={'/login'} className="mt-5 flex items-center justify-center gap-2 text-sm text-gray-500">
                     Already have an account?{' login'}
                 </Link>
